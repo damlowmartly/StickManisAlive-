@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Last Stickman</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>The Last Stickman</h1>
+      <p class="subtitle">A tiny life, unfolding in real time.</p>
+    </header>
+
+    <div id="world-container">
+      <canvas id="world" width="800" height="480"></canvas>
+
+      <div id="hud">
+        <div class="stat-row">
+          <span class="stat-label">🍖 Hunger</span>
+          <div class="bar-track"><div class="bar hunger-bar" id="bar-hunger"></div></div>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">⚡ Energy</span>
+          <div class="bar-track"><div class="bar energy-bar" id="bar-energy"></div></div>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">🎲 Boredom</span>
+          <div class="bar-track"><div class="bar boredom-bar" id="bar-boredom"></div></div>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">😠 Anger</span>
+          <div class="bar-track"><div class="bar anger-bar" id="bar-anger"></div></div>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">😢 Sadness</span>
+          <div class="bar-track"><div class="bar sadness-bar" id="bar-sadness"></div></div>
+        </div>
+      </div>
+
+      <div id="thought-bubble" class="hidden">
+        <span id="thought-text"></span>
+      </div>
+    </div>
+
+    <div id="memory-log">
+      <h3>📖 Memory</h3>
+      <ul id="memory-list"></ul>
+    </div>
+
+    <div id="controls">
+      <button id="btn-click-happy" class="ctrl-btn">😊 Cheer Up</button>
+      <button id="btn-click-angry" class="ctrl-btn">😤 Annoy</button>
+      <button id="btn-reset" class="ctrl-btn danger">🔄 Reset World</button>
+    </div>
+
+    <p class="tip">Click the canvas to poke the stickman. Interact to influence moods.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
